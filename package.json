@@ -1,0 +1,22 @@
+{
+  "name": "meet-landing-page",
+  "version": "1.0.0",
+  "description": "meet landing page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thealexgonzo/Meet-Landing-Page.git"
+  },
+  "author": "Jesus Alejandro Gonzalez Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thealexgonzo/Meet-Landing-Page/issues"
+  },
+  "homepage": "https://github.com/thealexgonzo/Meet-Landing-Page#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
