@@ -8,6 +8,155 @@ $color-grey: #87879d;
 $font-weight-light: 500;
 $font-weight-bold: 900;
 
+* {
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+// Media Queries
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    // 600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    // 900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    // 1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    // 1800px
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+// General Layout
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.vertical-line {
+  width: 0.1rem;
+  height: 8.4rem;
+  background-color: $color-grey;
+  margin: 6.4rem auto 1.5rem auto;
+}
+
+.number {
+  display: inline;
+  border: 1px solid $color-grey;
+  border-radius: 50%;
+  color: $color-grey;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+  font-weight: $font-weight-bold;
+}
+
+// Main section
+
+main {
+  text-align: center;
+
+  .image-logo {
+    margin: 4.8rem 0 5.4rem 0;
+  }
+  .image-hero {
+    background-image: url("../assets/tablet/image-hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    // Very proud of this code
+    height: 0;
+    padding-top: 40%;
+  }
+
+  .main__heading {
+    font-size: 4rem;
+    line-height: 4.4rem;
+    width: 70%;
+    margin: 4.8rem auto 0 auto;
+    color: $color-dark;
+  }
+
+  .main__text {
+    font-size: 1.6rem;
+    color: $color-grey;
+    line-height: 2.6rem;
+    width: 90%;
+    margin: 2.4rem auto 0 auto;
+  }
+
+  .main__buttons {
+    margin: 3.2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: $color-light;
+      font-size: 1.6rem;
+      //   background-color: $color-tertiary;
+      border-radius: 50rem;
+      margin: 0 auto;
+
+      &:first-child {
+        margin-bottom: 1.6rem;
+      }
+
+      &.buttons-download {
+        background-color: $color-primary;
+        padding: 1.6rem 4rem;
+
+        span {
+          color: $color-secondary;
+        }
+      }
+
+      &.buttons-about {
+        background-color: $color-tertiary;
+        padding: 1.6rem 2.9rem;
+      }
+    }
+  }
+
+  .image-grid {
+    margin-top: 6.4rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+}
+
+// Footer section
+
+footer {
+  text-align: center;
 }
