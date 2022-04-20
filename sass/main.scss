@@ -203,33 +203,52 @@ main {
 
 footer {
   text-align: center;
-  background-image: url("../assets/mobile/image-footer.jpg");
-  background-color: $color-primary;
-  // background-blend-mode: multiply;
-  mix-blend-mode: normal;
-  background-repeat: no-repeat;
-  background-size: cover;
-  // opacity: 0.1;
+  position: relative;
+  z-index: 1;
 
-  // .footer-line {
-  //   margin-top: -3rem;
-  // }
+  .footer-number {
+    top: -11rem;
+  }
+
+  .footer-overlay {
+    position: absolute;
+    top: 11rem;
+    width: 100%;
+    z-index: -1;
+    min-height: 42.8rem;
+    background: $color-primary;
+    opacity: 0.9;
+  }
+
+  .footer-background {
+    position: absolute;
+    top: 11rem;
+    width: 100%;
+    z-index: -2;
+    min-height: 42.8rem;
+    background-image: url("../assets/mobile/image-footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
   .footer__heading {
     @include secondary-heading();
-    margin-top: 6.4rem;
+    margin-top: 7.9rem;
     color: $color-light;
   }
 
   .footer__text {
-    @include paragraph();
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin: 2.4rem auto 0 auto;
+    width: 80%;
     color: $color-light;
-    margin-top: 2.4rem;
+    font-weight: $font-weight-light;
   }
 
   .footer__buttons {
-    margin: 3.2rem auto 0 auto;
-    padding-bottom: 7.2rem;
+    margin: 4.8rem auto 0 auto;
+    font-weight: $font-weight-bold;
 
     a {
       text-decoration: none;
