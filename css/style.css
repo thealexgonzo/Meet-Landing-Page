@@ -21,6 +21,12 @@ body {
   background-color: #87879d;
   margin: 6.4rem auto 1.5rem auto;
   opacity: 0.25; }
+  @media (min-width: 28.75em) {
+    .vertical-line {
+      margin-top: 8rem; } }
+  @media (min-width: 68.75em) {
+    .vertical-line {
+      margin-top: 11rem; } }
 
 .number {
   display: inline;
@@ -35,8 +41,14 @@ body {
 
 main {
   text-align: center; }
+  @media (min-width: 68.75em) {
+    main {
+      position: relative; } }
   main .image-logo {
     margin: 4.8rem 0 5.4rem 0; }
+    @media (min-width: 28.75em) {
+      main .image-logo {
+        margin-bottom: 6.4rem; } }
   main .image-hero {
     background-image: url("../assets/tablet/image-hero.png");
     background-repeat: no-repeat;
@@ -45,24 +57,61 @@ main {
     width: 100%;
     height: 0;
     padding-top: 40%; }
+    @media (min-width: 28.75em) {
+      main .image-hero {
+        background-image: url("../assets/tablet/image-hero.png"); } }
+    @media (min-width: 68.75em) {
+      main .image-hero {
+        background-image: url("../assets/desktop/image-hero-left.png"), url("../assets/desktop/image-hero-right.png");
+        background-size: 27%, 27%;
+        background-position: top 0rem left -3.3rem, bottom 0rem right -3.3rem;
+        padding-top: 24.5%;
+        position: absolute;
+        z-index: -1; } }
   main .main__heading--primary {
     font-size: 4rem;
     line-height: 4.4rem;
-    width: 70%;
+    max-width: 26rem;
     margin: 4.8rem auto 0 auto;
     color: #28283d;
     font-weight: 900; }
+    @media (min-width: 28.75em) {
+      main .main__heading--primary {
+        font-size: 4.8rem;
+        max-width: 32rem;
+        margin-top: 7.2rem;
+        line-height: 4.8rem; } }
+    @media (min-width: 68.75em) {
+      main .main__heading--primary {
+        margin-top: 10.8rem;
+        font-size: 6.4rem;
+        max-width: 45rem;
+        line-height: 6.4rem; } }
   main .main__text--primary {
     font-size: 1.6rem;
     line-height: 2.6rem;
-    margin: 0 2.4rem 0 2.4rem;
+    margin: 0 auto;
+    max-width: 32.5rem;
     font-weight: 500;
     color: #87879d;
-    margin-top: 2.4rem; }
+    margin: 2.4rem auto 0 auto;
+    max-width: 33rem; }
+    @media (min-width: 28.75em) {
+      main .main__text--primary {
+        max-width: 42rem; } }
+    @media (min-width: 68.75em) {
+      main .main__text--primary {
+        max-width: 54rem;
+        font-size: 1.8rem;
+        margin-top: 3.4rem; } }
   main .main__buttons {
     margin: 3.2rem auto 0 auto;
     display: flex;
     flex-direction: column; }
+    @media (min-width: 28.75em) {
+      main .main__buttons {
+        flex-direction: row;
+        max-width: 34.8rem; } }
     main .main__buttons a {
       text-decoration: none;
       color: #fafafa;
@@ -71,14 +120,21 @@ main {
       margin: 0 auto; }
       main .main__buttons a:first-child {
         margin-bottom: 1.6rem; }
+        @media (min-width: 28.75em) {
+          main .main__buttons a:first-child {
+            margin: 0; } }
       main .main__buttons a.buttons-download {
         background-color: #4d96a9;
         padding: 1.6rem 4rem; }
         main .main__buttons a.buttons-download span {
           color: #8fe3f9; }
+        main .main__buttons a.buttons-download:hover {
+          background-color: #71c0d4; }
       main .main__buttons a.buttons-about {
         background-color: #855fb1;
         padding: 1.6rem 2.9rem; }
+        main .main__buttons a.buttons-about:hover {
+          background-color: #b18bdd; }
   main .image-grid {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -86,6 +142,16 @@ main {
     margin: 6.4rem 2.4rem 0 2.4rem;
     grid-row-gap: 2.5rem;
     grid-column-gap: 2.4rem; }
+    @media (min-width: 41.25em) {
+      main .image-grid {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 1.1rem;
+        margin: 8.2rem 4rem 0 4rem; } }
+    @media (min-width: 68.75em) {
+      main .image-grid {
+        margin: 7.9rem 16.5rem 0 16.5rem;
+        grid-column-gap: 3rem; } }
     main .image-grid img {
       width: 100%;
       border-radius: 1rem; }
@@ -95,6 +161,12 @@ main {
     font-size: 1.6rem;
     letter-spacing: 0.4rem;
     margin-top: 6.4rem; }
+    @media (min-width: 28.75em) {
+      main .main__heading--tertiary {
+        margin-top: 8.2rem; } }
+    @media (min-width: 68.75em) {
+      main .main__heading--tertiary {
+        margin-top: 8rem; } }
   main .main__heading--secondary {
     font-size: 3.2rem;
     line-height: 3.6rem;
@@ -103,13 +175,33 @@ main {
     margin: 0 auto;
     margin-top: 2.4rem;
     color: #28283d; }
-  main .main__text--secondary {
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-    margin: 0 2.4rem 0 2.4rem;
-    font-weight: 500;
-    color: #87879d;
-    margin-top: 3.2rem; }
+    @media (min-width: 28.75em) {
+      main .main__heading--secondary {
+        font-size: 4rem;
+        max-width: 43rem;
+        line-height: 4.4rem; } }
+    @media (min-width: 28.75em) {
+      main .main__heading--secondary {
+        margin-top: 1.6rem; } }
+  main .main__secondary--paragraph {
+    width: 80%;
+    margin: 0 auto; }
+    main .main__secondary--paragraph .main__text--secondary {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      margin: 0 auto;
+      max-width: 32.5rem;
+      font-weight: 500;
+      color: #87879d;
+      margin-top: 3.2rem; }
+      @media (min-width: 28.75em) {
+        main .main__secondary--paragraph .main__text--secondary {
+          max-width: 58rem;
+          margin: 3.2rem auto 0 auto; } }
+      @media (min-width: 68.75em) {
+        main .main__secondary--paragraph .main__text--secondary {
+          font-size: 1.8rem;
+          max-width: 52rem; } }
 
 footer {
   text-align: center;
@@ -117,6 +209,8 @@ footer {
   z-index: 1; }
   footer .footer-number {
     top: -11rem; }
+  footer .vertical-line--footer {
+    margin-top: 7.2rem; }
   footer .footer-overlay {
     position: absolute;
     top: 11rem;
@@ -125,6 +219,9 @@ footer {
     min-height: 42.8rem;
     background: #4d96a9;
     opacity: 0.9; }
+    @media (min-width: 68.75em) {
+      footer .footer-overlay {
+        min-height: 30rem; } }
   footer .footer-background {
     position: absolute;
     top: 11rem;
@@ -133,7 +230,26 @@ footer {
     min-height: 42.8rem;
     background-image: url("../assets/mobile/image-footer.jpg");
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center; }
+    @media (min-width: 28.75em) {
+      footer .footer-background {
+        background-image: url("../assets/tablet/image-footer.jpg"); } }
+    @media (min-width: 68.75em) {
+      footer .footer-background {
+        background-image: url("../assets/desktop/image-footer.jpg");
+        min-height: 30rem; } }
+  footer .footer-content {
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 68.75em) {
+      footer .footer-content {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 111rem;
+        margin: 10.3rem auto 0 auto; } }
   footer .footer__heading {
     font-size: 3.2rem;
     line-height: 3.6rem;
@@ -142,6 +258,15 @@ footer {
     margin: 0 auto;
     margin-top: 7.9rem;
     color: #fafafa; }
+    @media (min-width: 28.75em) {
+      footer .footer__heading {
+        font-size: 4rem;
+        max-width: 43rem;
+        line-height: 4.4rem; } }
+    @media (min-width: 68.75em) {
+      footer .footer__heading {
+        margin: 0 0 0 1rem;
+        width: 37.5rem; } }
   footer .footer__text {
     font-size: 1.8rem;
     line-height: 2.6rem;
@@ -149,16 +274,30 @@ footer {
     width: 80%;
     color: #fafafa;
     font-weight: 500; }
+    @media (min-width: 28.75em) {
+      footer .footer__text {
+        max-width: 58rem;
+        margin-top: 3.2rem; } }
+    @media (min-width: 68.75em) {
+      footer .footer__text {
+        max-width: 35rem;
+        margin: 0; } }
   footer .footer__buttons {
-    margin: 4.8rem auto 0 auto;
-    font-weight: 900; }
-    footer .footer__buttons a {
-      text-decoration: none;
-      color: #fafafa;
-      font-size: 1.6rem;
-      background-color: #855fb1;
-      border-radius: 50rem;
-      margin: 0 auto;
-      padding: 1.6rem 4rem; }
-      footer .footer__buttons a span {
-        color: #d9b8ff; }
+    margin: 3.2rem auto 0 auto;
+    font-weight: 900;
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 1.6rem;
+    background-color: #855fb1;
+    border-radius: 50rem;
+    padding: 1.6rem 4rem; }
+    footer .footer__buttons:hover {
+      background-color: #b18bdd; }
+    footer .footer__buttons span {
+      color: #d9b8ff; }
+    @media (min-width: 28.75em) {
+      footer .footer__buttons {
+        margin-top: 4rem; } }
+    @media (min-width: 68.75em) {
+      footer .footer__buttons {
+        margin: 0 1rem 0 0; } }
